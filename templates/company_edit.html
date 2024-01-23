@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>案件編集</title>
+</head>
+<body>
+    <h1>案件を編集する</h1>
+    <div>
+        <form action="/company_edit/{{ company.id }}" method="post">
+            <input class="form-input" type="text" name="name" required placeholder="案件名（会社名）" value="{{ company.name }}"><br>
+            <input class="form-input" type="number" name="duedate" required placeholder="請求書送付期限" value="{{ company.duedate }}"><br>
+            <input type="submit" value="送信">
+        </form>
+    </div>
+</body>
+</html>

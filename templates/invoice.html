@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>請求書</title>
+</head>
+<body>
+    <h1>請求書一覧</h1>
+    <div>
+        <div>
+            {% for invoice in invoices %}
+                <p>月: {{ invoice.period }}, ステータス: {{ invoice.status }}</p>
+            {% endfor %}
+        </div>
+
+    </div>
+    <div>
+        <a href="{{ url_for('invoice_create' , company_id=company.id) }}">新規作成</a>
+    </div>
+</body>
+</html>
